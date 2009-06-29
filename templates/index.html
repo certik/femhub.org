@@ -3,33 +3,20 @@
 {% block content %}
 
 
-                <h1 class="heading">The FEMhub project</h1>
+<h1 class="heading">The FEMhub project</h1>
 
-<font color=purple><b>Open source FEM codes</b></font>: <br> 
-
-<a href="http://hpfem.org"><img src="images/hermes2d_logo.png" width=200
-    height=70 border=0></a>
-<a href="http://code.google.com/p/sfepy/"><img src="images/sfepy_logo_title_small.png" width=200 height=70 border=0></a><br>
-<br>
-
+<h2>Installation</h2>
 <p>
-<font color=purple><b>Visualization</b></font>: <br> 
-
-<a href="http://mayavi.sourceforge.net/"><img src="images/mayavi.gif" border=0></a>
-<a href="http://matplotlib.sourceforge.net/"><img src="images/matplotlib_logo.png" border=0></a>
-
-<p>
-<font color=purple><b>Other software</b></font>: <br> 
-
-<a href="http://ipython.scipy.org/moin/"><img src="images/IPy-transparent-120-flush.png" border=0></a>
-<a href="http://numpy.scipy.org/"><img src="images/numpylogo.png" border=0></a>
-<a href="http://www.scipy.org/"><img src="images/scipylogo.png" border=0></a>
-<a href="http://code.google.com/p/sympy/"><img src="images/sympy-160px.png" border=0></a><br>
-
-
-
-
-
+Download, unpack, build:
+<pre>
+$ wget http://sage.math.washington.edu/home/ondrej/scratch/femhub/femhub-0.9.3.tar
+$ tar xf femhub-0.9.3.tar
+$ cd femhub-0.9.3
+$ make
+</pre><br/>
+Depending on the speed of your computer, wait between 37 minutes to 1.5 hour.
+That's it. 
+</p>
 
 
 {% endblock %}
