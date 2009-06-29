@@ -1,0 +1,164 @@
+ <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>
+hpFEM.org: Unique features of Hermes
+</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+	<h1><font color=purple>FEMhub</font></h1>
+        <h2>Open-source FEM distribution</h2>
+</div>
+<div id="left">
+	<div id="menu" class="boxed">
+		<h2 class="heading">Pages</h2>
+		<ul>
+			<li class="first"><a href="index.html" title="">FEMhub project overview</a></li>
+			<li><a href="http://nb.femhub.org" title="">Web notebook</a></li>
+			<li><a href="http://code.google.com/p/femhub/" title="">Development</a></li>
+		</ul>
+
+<font color=purple><b>Our mission</b></font>: To create an open-source distribution featuring many finite element codes, along with 
+a web notebook and a unified Python interface. We want FEMhub to become an alternative to commercial FEM codes. <br>
+<br>
+
+<font color=purple><b>Mailing list</b></font>: Please use this
+<a href="http://groups.google.com/group/femhub">mailing list</a> for all communications related to FEMhub.<br>
+<br>
+
+<font color=purple><b>How to join</b></font>: See
+a list of <a href="http://code.google.com/p/femhub/issues/list?q=label:ProjectIdea">nice
+project ideas</a> and a list of
+<a href="http://code.google.com/p/femhub/issues/list?q=label:EasyToFix"> simple-to-fix issues</a>
+related to FEMhub.
+<br>
+
+
+
+
+	</div>
+</div>
+<!-- end #left -->
+<div id="right">
+	<div class="boxed">
+        <h2 class="heading">News</h2>
+<ul>
+    <li>May 18, 2009: femhub.org page created</li>
+    <li>May 13, 2009: femhub distribution started</li>
+</ul>
+	</div>
+</div>
+<!-- end #right -->
+<div id="center">
+	<div class="boxed">
+        
+
+                <h1 class="heading">Unique features</h1>
+                Hermes is based on several novel computational 
+                techniques developed by the <a href="http://hpfem.math.unr.edu">hp-FEM group</a> 
+                at the University of Nevada, Reno. Related research articles can be found 
+                <a href="articles.html" title="">here</a>. These methods make Hermes different 
+                from other FEM and hp-FEM codes. 
+<p>
+                <ul>
+                <li><font color=purple><b>PDE-independent adaptivity algorithms</font></b>: Nowadays it is no longer
+                possible to solve PDE without error control, i.e., without automatic adaptivity.
+                Hermes is able to guide 
+                automatic adaptivity without using any PDE-specific information
+                about the underlying equation (such as analytical error estimates). 
+                This methodology makes Hermes extremely flexible : It can be applied to PDE of any type  
+                (such as heat transfer, fluid and solid mechanics, electromagnetics, etc.)
+                as well as to eigenvalue 
+                problems, arbitrary combinations of multiphysics coupled problems, and even to image 
+                compression. </li>
+<p>
+                <li><font color=purple><b>Arbitrary-level hanging nodes</b></font>: 
+Hermes features our novel algorithm for arbitrary-level hanging nodes. This means that elements of very different sizes can be adjacent to each other in the mesh. This has two huge advantages:
+<ul>
+<li> Small-scale phenomena can be resolved extremely efficiently since no regularity-enforced (unwanted) refinements are present.</li>
+<li> Automatic adaptivity is simplified drastically, since all element refinements are completely local (splitting of an element does not affect the surrounding elements as in standard adaptivity algorithms). 
+</li>
+</ul>
+                <li><font color=purple><b>Multiple Types of Higher-Order Finite Elements in One Computation</b></font>: 
+In multi-physics coupled problems, various solution components live 
+in generally different spaces of functions. Therefore, various solution components can be discretized 
+using generally different types of finite elements. Currently, Hermes provides the following types of 
+hierarchic higher-order elements:
+
+<ul>  
+<li>
+ Standard H1 conforming elements for second-order elliptic/parabolic problems such as elasticity, heat transfer, or electrostatics.
+</li>
+<li>  
+H(curl) elements (edge elements) to be used, for example, for the electric field.
+</li>
+<li> 
+H(div) elements (face elements) for the magnetic field, velocity in incompressible viscous flow, etc. (implementation in progress).
+</li>
+<li>
+Taylor-Hood P{k+1}/Pk elements for some applications in incompressible fluid dynamics.
+</li>
+<li> 
+Discontinuous L2 elements that can be used, for example, for pressure in incompressible viscous flow. 
+</li>
+</ul>
+Thus Hermes is able to approximate different physical fields using geometrically and polynomially different meshes consisting of different element types. This is done in a monolithic way (i.e., there is one global stiffness matrix for the discrete problem). 
+<p>
+
+                <li><font color=purple><b>Adaptive multimesh hp-FEM</b></font>: 
+In multi-physics coupled problems, eigenproblems, and other applications various solution 
+exhibit dramatical qualitative as well as quantitative differences. For example, boundary layers which are characteristic for viscous flow are not present in electromagnetics, heat transfer, or elasticity. Conversely, electromagnetic field often contains singularities at sharp corners or edges, which do not appear in other physical fields. Standard methods that use the same mesh for all physical fields are thus inefficient. Hermes allows each solution component to be solved on an individual higher-order finite element mesh equipped with an independent automatic hp-adaptivity algorithm. This is done in a monolithic way (without operator splitting) using our novel multi-mesh hp-FEM technique.
+                This has a huge positive impact on the efficiency and accuracy of multiphysics,
+                eigenvalue, and other computations involving multiple solution components. </li>
+<p>
+                <li><font color=purple><b>Space-time adaptive hp-FEM on dynamical meshes</b></font>: 
+Hermes is the first code to provide automatic hp-adaptivity for nonstationary PDE problems on dynamical meshes that are refined and coarsened simultaneously as dictated by the space and time approximation error. The algorithm, which is a combination of the classical Rothe's method and our novel multi-mesh hp-FEM, is extremely robust and works in the same way for all nonstationary PDE problems. Our novel technique
+                is based on a combination of the multimesh hp-FEM with the classical Rothe's method.
+                See sample <a href="http://hpfem.math.unr.edu/gallery/">computational videos</a> for
+                illustration.</li>
+<p>
+
+                <li><font color=purple><b>Other features</b></font>: 
+<ul>
+<li>
+general unstructured triangular and quadrilateral meshes,
+</li>
+<li>
+fully anisotropic hp-refinement of quadrilateral elements,
+</li>
+<li>
+curvilinear elements with edges defined via NURBS,
+</li>
+<li>
+algorithms for linear, non-linear, stationary, and time dependent problems,
+</li>
+<li>
+easy-to-use automatic hp-adaptivity module,
+</li>
+<li>
+multiple element types can be used in one computation,
+</li>
+<li>
+basic postprocessing and visualization functions. 
+</li>
+                </ul>
+                </ul>
+
+
+	</div>
+</div>
+<!-- end #center -->
+<div style="clear: both;">&nbsp;</div>
+<div id="footer">
+	<p id="legal"> Hosted by the <a href="http://hpfem.math.unr.edu">hp-FEM group</a> 
+    at the <a href="http://www.unr.edu">University of Nevada, Reno</a>. <a
+        href="http://github.com/certik/femhub.org">Source</a>.
+E-mail: solin~at~unr~dot~edu, phone (775) 784-4642, fax (775) 784-6378. 
+</p>
+</div>
+</body>
+</html>

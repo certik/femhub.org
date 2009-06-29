@@ -1,7 +1,9 @@
  <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>FEMhub: Open-source FEM distribution</title>
+<title>
+hpFEM.org: What is hp-FEM?
+</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
@@ -54,33 +56,48 @@ related to FEMhub.
 <div id="center">
 	<div class="boxed">
         
+                <h1 class="heading">What is hp-FEM?</h1>
+                <font color=purple><b>hp-FEM</b></font> is a modern 
+version of the Finite Element Method (FEM), which combines
+adaptively finite elements of variable size (h) and polynomial 
+degree (p). With a good adaptivity algorithm, the hp-FEM 
+attains extremely fast (exponential) convergence rates.
+Sample hp-FEM mesh is shown in the following image which 
+corresponds to a flame propagation problem (enlarge using 
+right click + view image). 
 
+<p>
 
-                <h1 class="heading">The FEMhub project</h1>
-
-<font color=purple><b>Open source FEM codes</b></font>: <br> 
-
-<a href="http://hpfem.org"><img src="images/hermes2d_logo.png" width=200 height=70></a>
-<a href="http://code.google.com/p/sfepy/"><img src="images/sfepy_logo_title_small.png" width=200 height=70></a><br>
+<center>
+<img src="images/flame.jpg" width=500px/>
+</center>
 <br>
 
 <p>
-<font color=purple><b>Visualization</b></font>: <br> 
 
-<a href="http://mayavi.sourceforge.net/"><img src="images/mayavi.gif" width=200 height=70></a>
-<a href="http://matplotlib.sourceforge.net/"><img src="images/matplotlib_logo.png" width=200 height=70></a>
+
+
+The hp-FEM takes minutes where standard FEM takes hours or days. 
+However, adaptive hp-FEM codes are rather scarce since the hp-FEM
+is more demanding than standard FEM from both the mathematical 
+and programming point of view. </p>
 
 <p>
-<font color=purple><b>Other software</b></font>: <br> 
+<font color=purple><b>Example</b></font>:
+The following graph corresponding to the <a href="http://en.wikipedia.org/wiki/Hp-FEM">Fichera corner problem</a>
+is a representative example of the huge difference in convergence
+rates of
+adaptive low-order FEM (with linear and quadratic elements) and the
+hp-FEM. The horizontal and vertical axes show the number of degrees
+of freedom (unknowns in the discrete problem) and the error in
+logarithmic scale, respectively.
 
-<a href="http://ipython.scipy.org/moin/"><img src="images/IPy-transparent-120-flush.png" width=200 height=70></a>
-<a href="http://numpy.scipy.org/"><img src="images/numpylogo.png" width=200 height=70></a>
-<a href="http://www.scipy.org/"><img src="images/scipylogo.gif" width=200 height=70></a>
-<a href="http://code.google.com/p/sympy/"><img src="images/sympy-160px.png" width=200 height=70></a><br>
+<center>
+<img src="images/conv-new2.png" width=500px/>
+</center>
 
-
-
-
+<p>
+                <font color=purple><p><b>hp-FEM on Wikipedia</b></font>: Visit the <a href="http://en.wikipedia.org/wiki/Hp-FEM">Wikipedia hp-FEM page</a>.
 
 
 
