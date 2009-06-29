@@ -5,6 +5,12 @@
 
 <h1 class="heading">The FEMhub project</h1>
 
+<p>
+<strong>Our mission</strong>: To create an open-source distribution featuring
+many finite element codes, along with a web notebook and a unified Python
+interface. We want FEMhub to become an alternative to commercial FEM codes.
+</p>
+
 <h2>Installation</h2>
 <p>
 Download, unpack, build:
@@ -15,8 +21,29 @@ $ cd femhub-0.9.3
 $ make
 </pre><br/>
 Depending on the speed of your computer, wait between 37 minutes to 1.5 hour.
-That's it. 
+That's it.
 </p>
 
+<p>
+If you want, you can also download a binary from
+<a href="http://sage.math.washington.edu/home/ondrej/scratch/femhub/">here</a>,
+however, if it doesn't work for you, compile from source, that should always
+work (if not, please report a bug).
+</p>
+
+<h2>First Steps</h2>
+<p>
+<pre>
+$ ./spd
+----------------------------------------------------------------------
+| Femhub (FEM Distribution), Version 0.9.3, Release Date: 2009-06-28 |
+| Type notebook() for the GUI.                                       |
+----------------------------------------------------------------------
+In [1]: notebook()
+</pre>
+and a browser will start with the web notebook. Follow the instructions
+<a href="http://code.google.com/p/femhub/">here</a> to
+do your first calculation.
+</p>
 
 {% endblock %}
