@@ -15,8 +15,9 @@
 	<div id="menu" class="boxed">
 		<h2 class="heading">Pages</h2>
 		<ul>
-			<li class="first"><a href="index.html" title="">FEMhub project overview</a></li>
-			<li><a href="http://nb.femhub.org" title="">Web notebook</a></li>
+			<li class="first"><a href="index.html" title="">Intro and Installation</a></li>
+			<li><a href="overview.html" title="">FEMhub Project Overview</a></li>
+			<li><a href="http://nb.femhub.org" title="">Web Notebook</a></li>
 			<li><a href="http://code.google.com/p/femhub/" title="">Development</a></li>
 		</ul>
 
@@ -45,6 +46,9 @@ related to FEMhub.
 	<div class="boxed">
         <h2 class="heading">News</h2>
 <ul>
+    <li>June 28, 2009: Femhub 0.9.3 released</li>
+    <li>June 26, 2009: Femhub 0.9.2 released</li>
+    <li>June 25, 2009: Femhub 0.9.1 released</li>
     <li>May 18, 2009: femhub.org page created</li>
     <li>May 13, 2009: femhub distribution started</li>
 </ul>
@@ -56,33 +60,48 @@ related to FEMhub.
         
 
 
-                <h1 class="heading">The FEMhub project</h1>
-
-<font color=purple><b>Open source FEM codes</b></font>: <br> 
-
-<a href="http://hpfem.org"><img src="images/hermes2d_logo.png" width=200 height=70></a>
-<a href="http://code.google.com/p/sfepy/"><img src="images/sfepy_logo_title_small.png" width=200 height=70></a><br>
-<br>
+<h1 class="heading">The FEMhub project</h1>
 
 <p>
-<font color=purple><b>Visualization</b></font>: <br> 
+<strong>Our mission</strong>: To create an open-source distribution featuring
+many finite element codes, along with a web notebook and a unified Python
+interface. We want FEMhub to become an alternative to commercial FEM codes.
+</p>
 
-<a href="http://mayavi.sourceforge.net/"><img src="images/mayavi.gif" width=200 height=70></a>
-<a href="http://matplotlib.sourceforge.net/"><img src="images/matplotlib_logo.png" width=200 height=70></a>
+<h2>Installation</h2>
+<p>
+Download, unpack, build:
+<pre>
+$ wget http://sage.math.washington.edu/home/ondrej/scratch/femhub/femhub-0.9.3.tar
+$ tar xf femhub-0.9.3.tar
+$ cd femhub-0.9.3
+$ make
+</pre><br/>
+Depending on the speed of your computer, wait between 37 minutes to 1.5 hour.
+That's it.
+</p>
 
 <p>
-<font color=purple><b>Other software</b></font>: <br> 
+If you want, you can also download a binary from
+<a href="http://sage.math.washington.edu/home/ondrej/scratch/femhub/">here</a>,
+however, if it doesn't work for you, compile from source, that should always
+work (if not, please report a bug).
+</p>
 
-<a href="http://ipython.scipy.org/moin/"><img src="images/IPy-transparent-120-flush.png" width=200 height=70></a>
-<a href="http://numpy.scipy.org/"><img src="images/numpylogo.png" width=200 height=70></a>
-<a href="http://www.scipy.org/"><img src="images/scipylogo.gif" width=200 height=70></a>
-<a href="http://code.google.com/p/sympy/"><img src="images/sympy-160px.png" width=200 height=70></a><br>
-
-
-
-
-
-
+<h2>First Steps</h2>
+<p>
+<pre>
+$ ./spd
+----------------------------------------------------------------------
+| Femhub (FEM Distribution), Version 0.9.3, Release Date: 2009-06-28 |
+| Type notebook() for the GUI.                                       |
+----------------------------------------------------------------------
+In [1]: notebook()
+</pre>
+and a browser will start with the web notebook. Follow the instructions
+<a href="http://code.google.com/p/femhub/">here</a> to
+do your first calculation.
+</p>
 
 
 	</div>
