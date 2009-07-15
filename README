@@ -59,3 +59,33 @@ for template in templates:
 
 
 Add/delete it from the list "templates".
+
+
+How to push to femhub.org
+-------------------------
+
+The repository has two branches:
+
+master ..... the branch with template sources, just use "./generate" to create
+             the html pages, see the README for more info (this branch doesn't
+             contain the generated pages)
+gh-pages ... the branch which contains just the generated pages
+
+If you push the gh-pages to github, it will automatically create the pages at:
+
+http://certik.github.com/femhub.org
+
+(only instead of "certik" there will be your github name). This is
+very nice for testing pages, if you want to ask other people for
+opinions on your changes, without doing this "life" on our femhub.org
+pages.
+
+If you are satisfied with the changes and you want to push changes to
+femhub.org, just do:
+
+git push git@spilka:repos/femhub.org gh-pages
+
+and it will automatically recognize that you have updated the gh-pages
+branch and copies the file from the repository (on spilka) to
+/home/git/web/femhub.org and the apache rules for femhub.org
+point to that directory too.
