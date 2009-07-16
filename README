@@ -83,7 +83,7 @@ pages.
 If you are satisfied with the changes and you want to push changes to
 femhub.org, just do:
 
-git push git@spilka:repos/femhub.org gh-pages
+git push spilka:/home/git/repos/femhub.org gh-pages
 
 and it will automatically recognize that you have updated the gh-pages
 branch and copies the file from the repository (on spilka) to
