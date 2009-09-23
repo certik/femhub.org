@@ -15,20 +15,26 @@ interface. We want FEMhub to become an alternative to commercial FEM codes.
 <p>
 Download, unpack, build:
 <pre>
-$ wget http://sage.math.washington.edu/home/ondrej/scratch/femhub/femhub-0.9.6.tar
-$ tar xf femhub-0.9.6.tar
-$ cd femhub-0.9.6
+$ wget http://sage.math.washington.edu/home/ondrej/femhub/femhub-0.9.7.tar
+$ tar xf femhub-0.9.7.tar
+$ cd femhub-0.9.7
 $ make
 </pre><br/>
-Depending on the speed of your computer, wait between 37 minutes to 1.5 hour.
-That's it.
+Depending on the speed of your computer, wait between 14 minutes to 1.5 hour.
+That's it. It should work on any Linux, Mac and Windows (in Cygwin), if it
+fails, please report a bug.
 </p>
 
-<p>
+</p>
 If you want, you can also download a binary from
-<a href="http://sage.math.washington.edu/home/ondrej/scratch/femhub/">here</a>,
+<a href="http://sage.math.washington.edu/home/ondrej/femhub/">here</a>,
 however, if it doesn't work for you, compile from source, that should always
-work (if not, please report a bug).
+work.
+</p>
+<p>
+You can take advantage of several cores on your computer by executing
+<code>export MAKE="make -j9"</code> before typing <code>make</code> to compile
+in parallel on 9 cores.
 </p>
 
 <h2>First Steps</h2>
