@@ -3,5 +3,6 @@ rm -rf *.html
 rm -rf *.css
 
 cp -r output/* .
-#git add .
-#git reset HEAD output
+git add .
+git ls-files --deleted | xargs -r git rm
+git reset HEAD output
