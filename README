@@ -78,7 +78,14 @@ http://certik.github.com/femhub.org
 (only instead of "certik" there will be your github name). This is
 very nice for testing pages, if you want to ask other people for
 opinions on your changes, without doing this "life" on our femhub.org
-pages.
+pages. To update the gh-pages branch, do:
+
+$ git co master
+$ git clean -dfx
+$ ./generate
+$ git co gh-pages
+$ ./copy-pages
+$ git ci -m "update"
 
 If you are satisfied with the changes and you want to push changes to
 femhub.org, just do:
