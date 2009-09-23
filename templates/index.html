@@ -42,14 +42,50 @@ in parallel on 9 cores.
 <pre>
 $ ./femhub
 ----------------------------------------------------------------------
-| Femhub (FEM Distribution), Version 0.9.6, Release Date: 2009-07-30 |
+| FEMhub Version 0.9.7, Release Date: 2009-09-23                     |
 | Type notebook() for the GUI.                                       |
 ----------------------------------------------------------------------
 In [1]: notebook()
-</pre>
-and a browser will start with the web notebook. Follow the instructions
-<a href="http://code.google.com/p/femhub/">here</a> to
-do your first calculation.
+</pre><br/>
+and a browser will start with the web notebook. Create a new worksheet and type
+the following into the cell:
+<br/>
+<br/>
+<pre>
+import hermes2d
+hermes2d.demo_layer()
+</pre><br/>
+Press Shift+Enter (or click the "evaluate" button) and you should see a
+calculation:
+<br/>
+<br/>
+<pre>
+iter=00, err_est=99.05%, DOFS=1
+iter=01, err_est=86.54%, DOFS=3
+iter=02, err_est=82.76%, DOFS=7
+iter=03, err_est=76.92%, DOFS=21
+iter=04, err_est=61.67%, DOFS=39
+iter=05, err_est=43.00%, DOFS=74
+iter=06, err_est=27.93%, DOFS=113
+iter=07, err_est=20.37%, DOFS=156
+iter=08, err_est=14.32%, DOFS=218
+iter=09, err_est=11.06%, DOFS=298
+iter=10, err_est= 8.01%, DOFS=412
+iter=11, err_est= 5.68%, DOFS=555
+iter=12, err_est= 3.86%, DOFS=714
+iter=13, err_est= 2.53%, DOFS=861
+iter=14, err_est= 1.66%, DOFS=1056
+iter=15, err_est= 1.06%, DOFS=1223
+iter=16, err_est= 0.68%, DOFS=1565
+</pre><br/>
+and then the solution:<br/>
+<img src="images/layer-sol.png"><br/>
+and a convergence graph:<br/>
+<img src="images/layer-convergence-graph.png"><br/>
+</p>
+<p>
+See here
+<a href="http://code.google.com/p/femhub/">here</a> for more instructions and demos.
 </p>
 
 {% endblock %}
