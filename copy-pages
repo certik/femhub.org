@@ -1,0 +1,7 @@
+rm -rf images
+rm -rf *.html
+rm -rf *.css
+
+cp -r output/* .
+#git add .
+#git reset HEAD output
