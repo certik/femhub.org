@@ -2,7 +2,7 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title>{% block title %}FEMhub: Open-source FEM distribution{% endblock %}</title>
+        <title>FEMhub: Open-source FEM distribution</title>
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 
         <link type="text/css" href="css/style.css" rel="stylesheet" />
@@ -27,10 +27,34 @@
                 <div class="box right">
                     <div class="title">Latest News</div>
                     <ul class="list">
-                        {% for when, what in news %}
-                            <li class="when">{{ when|strftime('%B %d, %Y') }}</li>
-                            <li class="what">{{ what }}</li>
-                        {% endfor %}
+                        
+                            <li class="when">September 23, 2009</li>
+                            <li class="what">FEMhub 0.9.7 released</li>
+                        
+                            <li class="when">July 30, 2009</li>
+                            <li class="what">FEMhub 0.9.6 released</li>
+                        
+                            <li class="when">July 14, 2009</li>
+                            <li class="what">FEMhub 0.9.5 released</li>
+                        
+                            <li class="when">June 29, 2009</li>
+                            <li class="what">FEMhub 0.9.4 released</li>
+                        
+                            <li class="when">June 28, 2009</li>
+                            <li class="what">FEMhub 0.9.3 released</li>
+                        
+                            <li class="when">June 26, 2009</li>
+                            <li class="what">FEMhub 0.9.2 released</li>
+                        
+                            <li class="when">June 25, 2009</li>
+                            <li class="what">FEMhub 0.9.1 released</li>
+                        
+                            <li class="when">May 18, 2009</li>
+                            <li class="what">femhub.org page created</li>
+                        
+                            <li class="when">May 13, 2009</li>
+                            <li class="what">FEMhub distribution started</li>
+                        
                     </ul>
                 </div>
                 <div class="box left">
@@ -66,8 +90,16 @@
                     </ul>
                 </div>
                 <div id="content">
-                    {% block content %}
-                    {% endblock %}
+                    
+
+<h2>Compute with FEMhub</h2>
+
+<p>
+FEMhub can be used to solve a variety of problems ranging from single ODE, ODE systems, one-dimensional PDE,
+to systems of PDE in 2D. More coming soon.
+</p>
+
+
                 </div>
             </div>
             <div id="footer">
@@ -77,4 +109,3 @@
         </div>
     </body>
 </html>
-

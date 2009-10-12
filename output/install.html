@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>FEMhub: Open-source FEM distribution</title>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+        <link type="text/css" href="css/style.css" rel="stylesheet" />
+        <link type="text/css" href="css/menus.css" rel="stylesheet" />
+        <link type="text/css" href="css/boxes.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="background">
+            <div id="container">
+                <div id="banner"></div>
+                <div class="box left">
+                    <div class="title">FEMhub Pages</div>
+                    <ul class="menu">
+                        <li><a href="welcome.html">Welcome</a></li>
+                        <li><a href="install.html">Install</a></li>
+                        <li><a href="teach.html">Teach</a></li>
+                        <li><a href="compute.html">Compute</a></li>
+                        <li><a href="codes.html">Codes</a></li>
+                        <li><a href="conferences.html">Conferences</a></li>
+                    </ul>
+                </div>
+                <div class="box right">
+                    <div class="title">Latest News</div>
+                    <ul class="list">
+                        
+                            <li class="when">September 23, 2009</li>
+                            <li class="what">FEMhub 0.9.7 released</li>
+                        
+                            <li class="when">July 30, 2009</li>
+                            <li class="what">FEMhub 0.9.6 released</li>
+                        
+                            <li class="when">July 14, 2009</li>
+                            <li class="what">FEMhub 0.9.5 released</li>
+                        
+                            <li class="when">June 29, 2009</li>
+                            <li class="what">FEMhub 0.9.4 released</li>
+                        
+                            <li class="when">June 28, 2009</li>
+                            <li class="what">FEMhub 0.9.3 released</li>
+                        
+                            <li class="when">June 26, 2009</li>
+                            <li class="what">FEMhub 0.9.2 released</li>
+                        
+                            <li class="when">June 25, 2009</li>
+                            <li class="what">FEMhub 0.9.1 released</li>
+                        
+                            <li class="when">May 18, 2009</li>
+                            <li class="what">femhub.org page created</li>
+                        
+                            <li class="when">May 13, 2009</li>
+                            <li class="what">FEMhub distribution started</li>
+                        
+                    </ul>
+                </div>
+                <div class="box left">
+                    <div class="title">Our Mission</div>
+                    <ul class="list">
+                        <li class="what justify">
+                            To create an open-source distribution featuring many finite element
+                            codes, along with a web notebook and a unified Python interface. We
+                            want FEMhub to become an alternative to commercial FEM codes.
+                        </li>
+                    </ul>
+                </div>
+                <div class="box left">
+                    <div class="title">How To Join</div>
+                    <ul class="list">
+                        <li class="what justify">
+                            See a list of
+                            <a href="http://spilka.math.unr.edu/bugs/buglist.cgi?&product=FEMhub&keywords_type=allwords&keywords=ProjectIdea">nice project ideas</a>
+                            and a list of
+                            <a href="http://spilka.math.unr.edu/bugs/buglist.cgi?&product=FEMhub&keywords_type=allwords&keywords=EasyToFix">simple-to-fix issues</a>
+                            related to FEMhub.
+                        </li>
+                    </ul>
+                </div>
+                <div class="box left">
+                    <div class="title">Mailing List</div>
+                    <ul class="list">
+                        <li class="what justify">
+                            Please use this
+                            <a href="http://groups.google.com/group/femhub">mailing list</a>
+                            for all communications related to FEMhub.
+                        </li>
+                    </ul>
+                </div>
+                <div id="content">
+                    
+<h2>Download and Install FEMhub</h2>
+
+<p>
+Download, unpack, build:
+</p>
+
+<pre>
+$ wget http://femhub.org/femhub-0.9.7.tar
+$ tar -xf femhub-0.9.7.tar
+$ cd femhub-0.9.7
+$ make
+</pre>
+
+<p>
+Depending on the speed of your computer, wait between 14 minutes to 1.5 hour.
+That's it. It should work on any Linux, Mac and Windows (in Cygwin), if it
+fails, please report a bug. If you want, you can also download a binary from
+here, however, if it doesn't work for you, compile from source, that should
+always work.
+</p>
+
+<p>
+You can take advantage of several cores on your computer by executing
+</p>
+
+<pre>
+$ export MAKE="make -j9"
+</pre>
+
+<p>
+before typing make to compile in parallel on 9 cores. If you encounter
+problems, let us know through the FEMhub mailing list.
+</p>
+
+<h2>Run It!</h2>
+
+<pre>
+$ ./femhub
+------------------------------------------------------------
+| FEMhub Version 0.9.7, Release Date: 2009-09-23           |
+| Type notebook() for the GUI.                             |
+------------------------------------------------------------
+In [1]: notebook()
+</pre>
+
+<p>
+and a browser will start with the web notebook. Create a new worksheet
+and type the following into the cell:
+</p>
+
+<pre>
+import hermes2d
+hermes2d.demo_layer()
+</pre>
+
+<p>
+Press <i>Shift+Enter</i> (or click the "evaluate" button) and you
+should see the following output:
+</p>
+
+<pre>
+iter=00, err_est=99.05%, DOFS=1
+iter=01, err_est=86.54%, DOFS=3
+iter=02, err_est=82.76%, DOFS=7
+iter=03, err_est=76.92%, DOFS=21
+iter=04, err_est=61.67%, DOFS=39
+iter=05, err_est=43.00%, DOFS=74
+iter=06, err_est=27.93%, DOFS=113
+iter=07, err_est=20.37%, DOFS=156
+iter=08, err_est=14.32%, DOFS=218
+iter=09, err_est=11.06%, DOFS=298
+iter=10, err_est= 8.01%, DOFS=412
+iter=11, err_est= 5.68%, DOFS=555
+iter=12, err_est= 3.86%, DOFS=714
+iter=13, err_est= 2.53%, DOFS=861
+iter=14, err_est= 1.66%, DOFS=1056
+iter=15, err_est= 1.06%, DOFS=1223
+iter=16, err_est= 0.68%, DOFS=1565
+</pre>
+
+                </div>
+            </div>
+            <div id="footer">
+                Copyright &copy; 2009 <a href="http://hpfem.org">hp-FEM group</a>,
+                <a href="http://www.unr.edu">University of Nevada, Reno</a>
+            </div>
+        </div>
+    </body>
+</html>
