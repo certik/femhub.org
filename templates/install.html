@@ -1,18 +1,34 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h2>Download and Install FEMhub</h2>
+<h2>Download and Install</h2>
 
 <p>
 Download, unpack, build:
 </p>
 
+<font color=green>
 <pre>
 $ wget http://femhub.org/femhub-0.9.7.tar
 $ tar -xf femhub-0.9.7.tar
 $ cd femhub-0.9.7
 $ make
 </pre>
+</font>
+
+<p>
+You can take advantage of several cores on your computer by executing
+</p>
+
+<font color=green>
+<pre>
+$ export MAKE="make -j9"
+</pre>
+</font>
+
+<p>
+before typing make to compile in parallel on 9 cores. 
+</p>
 
 <p>
 Depending on the speed of your computer, wait between 14 minutes to 1.5 hour.
@@ -22,21 +38,14 @@ here, however, if it doesn't work for you, compile from source, that should
 always work.
 </p>
 
-<p>
-You can take advantage of several cores on your computer by executing
+If you encounter problems, let us know through the <a href="http://groups.google.com/group/femhub">FEMhub mailing list</a>.
 </p>
-
-<pre>
-$ export MAKE="make -j9"
-</pre>
-
 <p>
-before typing make to compile in parallel on 9 cores. If you encounter
-problems, let us know through the FEMhub mailing list.
 </p>
 
 <h2>Run It!</h2>
 
+<font color=green>
 <pre>
 $ ./femhub
 ------------------------------------------------------------
@@ -45,16 +54,19 @@ $ ./femhub
 ------------------------------------------------------------
 In [1]: notebook()
 </pre>
+</font>
 
 <p>
 and a browser will start with the web notebook. Create a new worksheet
 and type the following into the cell:
 </p>
 
+<font color=green>
 <pre>
 import hermes2d
 hermes2d.demo_layer()
 </pre>
+</font>
 
 <p>
 Press <i>Shift+Enter</i> (or click the "evaluate" button) and you
@@ -80,5 +92,15 @@ iter=14, err_est= 1.66%, DOFS=1056
 iter=15, err_est= 1.06%, DOFS=1223
 iter=16, err_est= 0.68%, DOFS=1565
 </pre>
+
+<img src="img/layer-1.png" height=250>
+<p>
+</p>
+<img src="img/layer-2.png" height=270>
+<p>
+</p>
+<img src="img/layer-3.png" height=260>
+
+
 {% endblock %}
 
