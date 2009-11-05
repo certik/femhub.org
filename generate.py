@@ -7,6 +7,7 @@ from jinja2 import Environment, FileSystemLoader
 env = Environment(loader=FileSystemLoader('templates'))
 
 news = [
+    (datetime.date(2009, 10, 15), 'New home page launched'),
     (datetime.date(2009, 9, 23), 'FEMhub 0.9.7 released'),
     (datetime.date(2009, 7, 30), 'FEMhub 0.9.6 released'),
     (datetime.date(2009, 7, 14), 'FEMhub 0.9.5 released'),
